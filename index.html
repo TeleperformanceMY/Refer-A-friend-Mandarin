@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teleperformance ID Link Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@latest"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- Logo Container -->
+<div class="logo-container">
+    <img src="TPLogo11.png" alt="Logo">
+</div>
+
+<!-- Popup Container -->
+<div class="popup-container">
+    
+    <!-- Step 1: Enter BMS Code -->
+    <div class="popup-content" id="step1">
+        <div class="additional-logo">
+            <img src="TPLogo11.png" alt="Additional Logo">
+        </div>
+        <h2>请输入您的 BMS 识别码</h2>
+        <form id="id-form">
+            <label for="id">BMS 识别码</label>
+            <input type="text" id="id" name="id" required placeholder="在这里输入您的 BMS 识别码">
+            <p>您的推荐人希望到哪个国家工作？</p>
+
+            <button type="button" onclick="submitForm('Penang')">Penang</button>
+            <button type="button" onclick="submitForm('KL')">KL</button>
+        </form>
+    </div>
+
+    <!-- Step 2: Choose Option and Generate Link -->
+    <div class="popup-content" id="step2" style="display: none;">
+        <h2>感谢您的推荐!</h2>
+        <div id="generateLink"></div>
+        <div id="generated-qr-code"></div>
+        <p> aviliable Job Offer.</p>
+        <div id="first-options" style="display: none;">
+            <button type="button" onclick="generateLink(1)">Evergreen for Mandarin Banking</button>
+        </div>
+        <div id="second-options" style="display: none;">
+            <button type="button" onclick="generateLink(3)">Evergreen for Mandarin Banking</button>
+        </div>
+    </div>
+<!-- Step 3: Generated Link and QR Code -->
+<div class="popup-content" id="step3" style="display: none;">
+    <div class="additional-logo">
+        <img src="TPLogo11.png" alt="Additional Logo">
+    </div>
+    <h2>感谢您的推荐!</h2>
+    <p>随着我们进军泰国，让我们一起成为 #MoreTogether，一起 #ElevateAsia，以下是您的朋友可以使用的链接，以便将此标记到我们的招聘系统中</p>
+    <p>Here is the generated link:</p>
+    <p id="generated-link"></p>
+    <button id="share-button-whatsapp">通过 WhatsApp 分享</button>
+    <button id="share-button-line">通过 Line 分享</button>
+    
+    <div id="qrBox">
+        <img src="" id="qrImg">
+    </div>
+    <button onclick="generateQrCode()">或者让您的朋友扫描以上的二维码！</button>
+    <p>感谢您的推荐!</p>
+    <p>随着我们进军马来西亚，让我们一起成为 #MoreTogether，一起 #ElevateAsia，以下是您的朋友可以使用的链接，以便将此标记到我们的招聘系统中。</p>
+    <h2>他们可以通过虚拟现实参观我们的位置，以便他们了解我们：</h2>
+
+    <div id="picture-container">
+        <img src="MicrosoftTeams-image.png" alt="Description of the image">
+    </div>
+    <p>人才招聘团队</p>
+</div>
+
+
+
+</div>
+
+</body>
+</html>

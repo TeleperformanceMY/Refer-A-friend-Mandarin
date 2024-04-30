@@ -1,0 +1,168 @@
+body 
+
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.popup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.popup-content {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; 
+    text-align: center;
+        display: flex;
+    flex-direction: column; /* Set flex direction to column */
+    justify-content: center; /* Center content vertically */
+    align-items: center; 
+
+    
+}
+
+h2 {
+    color: #b52b65; /* Pinkish purple */
+        font-size: 28px; /* Larger font size */
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #666666;
+}
+
+input {
+    width: calc(100% - 20px); /* Subtract padding from width */
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #f2f2f2; /* Light gray border */
+    border-radius: 10px;
+    font-size: 16px; /* Larger font size */
+    transition: border-color 0.3s; /* Smooth border transition */
+}
+input:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #f02757; /* Hot pink border color on focus */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #903c8e; /* Deep purple */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a458b7; /* Lighter purple on hover */
+}
+
+/* Add styles for the QR code container */
+#qr-code {
+    margin-top: 20px; /* Adjust spacing */
+    text-align: center; /* Center QR code */
+    position: relative; /* Position container for absolute positioning of logo */
+}
+
+/* Optional: Style for the generated QR code itself */
+#qr-code canvas {
+    width: 200px; /* Adjust the size of the QR code */
+    height: auto;
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add some border radius for rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Add styles for the logo */
+#qr-code img.logo {
+    position: absolute; /* Position the logo relative to the container */
+    top: 50%; /* Center the logo vertically */
+    left: 50%; /* Center the logo horizontally */
+    transform: translate(-50%, -50%); /* Center the logo precisely */
+    max-width: 80px; /* Adjust the maximum width of the logo */
+    max-height: 80px; /* Adjust the maximum height of the logo */
+    z-index: 1; /* Ensure the logo appears above the QR code */
+}
+
+/* Add styles for the share buttons */
+#share-button-whatsapp,
+#share-button-line {
+    margin-top: 20px; /* Adjust spacing */
+    margin-bottom: 20px; /* Adjust spacing */
+    padding: 10px 20px;
+    background-color: #903c8e; /* Deep purple */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#share-button-whatsapp:hover,
+#share-button-line:hover {
+    background-color: #a458b7; /* Lighter purple on hover */
+}
+
+/* Color hashtags */
+.popup-content::before,
+.popup-content::after {
+    content: attr(data-content);
+    color: #ff69b4; /* Hot pink */
+    font-weight: bold; /* Make hashtags bold */
+}
+#picture-container {
+    margin-top: 20px; /* Adjust spacing */
+    text-align: center; /* Center the image */
+    position: relative;
+}
+#picture-container img {
+    width: 200px; /* Set the width to match the QR code size */
+    height: 200px; /* Set the height to match the QR code size */
+    border: 1px solid #ccc; /* Add a border for clarity */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+#custom-image {
+    max-width: 200px; /* Adjust the maximum width of the image */
+    max-height: 200px; /* Adjust the maximum height of the image */
+}
+/* CSS for logo container */
+.logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure the logo appears above other content */
+}
+
+.logo-container img {
+    max-width: 100%; /* Make the logo responsive */
+    height: auto;
+
+}
+/* Adjustments for other elements */
+.popup-container {
+    position: relative;  /* Ensure the logo container is positioned relative to this container */
+    z-index: 1; /* Ensure other content appears above the logo */
+}
+
+.additional-logo {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    transform: scale(0.2); /* Scale down */
+    margin-top: 20px; 
+}
+ 
+
