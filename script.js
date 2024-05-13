@@ -32,13 +32,13 @@ function generateLink(option) {
     var link;
     switch (option) {
         case 1:
-            link = "https://careerseng-teleperformance.icims.com/jobs/37277/customer-success-specialist---mandarin/job?mode=job&iis=" + idInput ;
+            link = "https://careerseng-teleperformance.icims.com/jobs/37277/customer-success-specialist---mandarin/job?mode=job&iis=RAF&iisn=" + idInput ;
             break;
         case 2:
-            link = "https://careerseng-teleperformance.icims.com/jobs/34090/customer-success-specialist---banking-%28m%29---mandarin/job?mode==job&iis=" + idInput ;
+            link = "https://careerseng-teleperformance.icims.com/jobs/34090/customer-success-specialist---banking-%28m%29---mandarin/job?mode==job&iis=RAF&iisn=" + idInput ;
             break;
         case 3:
-            link = "https://careerseng-teleperformance.icims.com/jobs/34090/customer-success-specialist---banking-%28m%29---mandarin/job?mode==job&iis=" + idInput ;
+            link = "https://careerseng-teleperformance.icims.com/jobs/34090/customer-success-specialist---banking-%28m%29---mandarin/job?mode==job&iis=RAF&iisn=" + idInput ;
             break;
         case 4:
             link = "www.D1-example.com";
